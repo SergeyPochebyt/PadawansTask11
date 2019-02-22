@@ -6,27 +6,27 @@ namespace PadawansTask11
     {
         public static int? FindIndex(double[] array, double accuracy)
         {
-
-			if (array == null) throw new ArgumentNullException();
-            if (accuracy <= 0 || accuracy >= 1) throw new ArgumentException();
+            if (array == null) throw new ArgumentNullException();
+            if (accuracy <= 0 || accuracy >= 1) throw new ArgumentOutOfRangeException();
+            if (array.Length == 0) throw new ArgumentException();
             
 
             for (int i = 0; i < array.Length; i++)
             {
-                double sum1 = 0;
-                double sum2 = 0;
+                decimal sum1 = 0;
+                decimal sum2 = 0;
 
                 for (int j = 0; j < i; j++)
                 {
-                    sum1 = sum1 + array[j];
+                    sum1 = sum1 + (decimal)array[j];
                 }
 
                 for (int j = array.Length - 1; j > i; j--)
                 {
-                    sum2 = sum2 + array[j];
+                    sum2 = sum2 + (decimal)array[j];
                 }
 
-                if (Math.Abs(sum1 - sum2) < accuracy)
+                if (Math.Abs(sum1 - sum2) < (decimal)accuracy)
                 {
                     return i;
                 }
