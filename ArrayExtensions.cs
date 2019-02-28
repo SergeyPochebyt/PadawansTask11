@@ -18,15 +18,15 @@ namespace PadawansTask11
 
                 for (int j = 0; j < i; j++)
                 {
-                    sum1 = sum1 + (decimal)array[j];
+                    sum1 = sum1 + array[j];
                 }
 
                 for (int j = array.Length - 1; j > i; j--)
                 {
-                    sum2 = sum2 + (decimal)array[j];
+                    sum2 = sum2 + array[j];
                 }
 
-                if (Math.Abs(sum1 - sum2) < (decimal)accuracy)
+                if (Math.Abs(sum1 - sum2) < accuracy)
                 {
                     return i;
                 }
