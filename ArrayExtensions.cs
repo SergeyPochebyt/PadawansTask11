@@ -13,8 +13,8 @@ namespace PadawansTask11
 
             for (int i = 0; i < array.Length; i++)
             {
-                decimal sum1 = 0;
-                decimal sum2 = 0;
+                double sum1 = 0;
+                double sum2 = 0;
 
                 for (int j = 0; j < i; j++)
                 {
